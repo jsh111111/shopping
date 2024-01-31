@@ -10,9 +10,6 @@
 	src="${pageContext.request.contextPath}/ckeditor/ckeditor.js">	
 </script>
 <script type="text/JavaScript">
-	$(function() {
-		CKEDITOR.replace('detail'); // <TEXTAREA>태그 id 값
-	});
 
 	function checkIn(f) {
 		if (f.pname.value == "") {
@@ -42,7 +39,7 @@
 	<div class="container mt-3">
 		<h3 class="">상품 등록</h3>
 		<form class="" action="/contents/create" method="post"
-			enctype="multipart/form-data" onsubmit="return checkIn(this)">
+			enctype="multipart/form-data">
 
 			<div class="mb-3 mt-3">
 				<label for="cateno">상품분류</label>

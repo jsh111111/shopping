@@ -10,9 +10,6 @@
 	src="${pageContext.request.contextPath}/ckeditor/ckeditor.js">
 </script>
 <script type="text/JavaScript">
-	$(function() {
-		CKEDITOR.replace('detail'); // <TEXTAREA>태그 id 값
-	});
 
 	function checkIn(f) {
 		if (f.pname.value == "") {
@@ -41,8 +38,7 @@
 <body>
 	<div class="container mt-3">
 		<h3>상품 수정</h3>
-		<form action="/contents/update" method="post"
-			onsubmit="return checkIn(this)">
+		<form action="/contents/update" method="post">
 			<input type="hidden" name="contentsno" value="${contentsno}">
 			<div class="mb-3 mt-3">
 				<label for="cateno">상품분류</label>
